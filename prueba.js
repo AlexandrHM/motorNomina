@@ -75,3 +75,15 @@ function calcularLineaOptima(montoMinimo, montoMaximo) {
     const p2 = montoMinimo + 0.0175 * (montoMaximo - montoMinimo);
     return Math.max(p1, p2);
 }
+
+const resultadoA = calcMotor('A', new Date('2022-06-12'), 'f');
+console.log(resultadoA);
+
+const resultadoB =  calcMotor('B', new Date('1993-12-30'), 'f');
+console.log(resultadoB); 
+
+const resultadoC =  calcMotor('C', new Date('2020-09-19'), 'm');
+console.log(resultadoC);
+
+const resultadoD = calcMotor('D', new Date('2019-01-15'), 'm');
+console.log(resultadoD);
