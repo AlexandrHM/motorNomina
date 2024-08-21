@@ -69,3 +69,9 @@ function obtenerMontoMaximo(tipoNomina, meses, genero) {
 
     return montosMaximos[genero][tipoNomina][index];
 }
+
+function calcularLineaOptima(montoMinimo, montoMaximo) {
+    const p1 = montoMinimo + Math.sqrt(montoMaximo - montoMinimo);
+    const p2 = montoMinimo + 0.0175 * (montoMaximo - montoMinimo);
+    return Math.max(p1, p2);
+}
