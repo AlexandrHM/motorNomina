@@ -44,3 +44,28 @@ function obtenerMontoMinimo(tipoNomina, meses, genero) {
 
     return montosMinimos[genero][tipoNomina][index];
 }
+
+function obtenerMontoMaximo(tipoNomina, meses, genero) {
+    const montosMaximos = {
+        m: {
+            A: [4900, 4700, 4600, 4600, 4500],
+            B: [4700, 4400, 5000, 4400, 4900],
+            C: [5000, 4700, 5000, 4200, 4600],
+            D: [4400, 4700, 4300, 4900, 4300]
+        },
+        f: {
+            A: [4000, 4200, 4100, 4200, 4500],
+            B: [4700, 4200, 4500, 4300, 4400],
+            C: [4600, 4900, 4600, 4700, 4000],
+            D: [5000, 4900, 4700, 5000, 4300]
+        }
+    };
+
+    let index = 0;
+    if (meses >= 28) index = 4;
+    else if (meses >= 27) index = 3;
+    else if (meses >= 26) index = 2;
+    else if (meses >= 25) index = 1;
+
+    return montosMaximos[genero][tipoNomina][index];
+}
